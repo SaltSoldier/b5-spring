@@ -22,7 +22,7 @@ public class DemoApplication {
     @ResponseBody
     public Map<String, String> root() {
         Map<String, String > response = new HashMap<>();
-        response.put("message", "I am SALT");
+        response.put("message", "Hello World!");
         return response;
     }
 

@@ -28,9 +28,21 @@ public class DemoApplicationTests {
     }
 
     @Test
-    public void indexTest() throws Exception {
+    public void rootTest() throws Exception {
         mvc.perform(get("/"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.message").value("Hello World!"));
+    }
+
+    @Test
+    public void indexTest() throws Exception {
+        mvc.perform(get("/index"))
+                .andExpect(status().isOk());
+    }
+
+    @Test
+    public void userTest() throws Exception {
+        mvc.perform(get("/{user_name}"))
+                .andExpect(status().isOk());
     }
 }
