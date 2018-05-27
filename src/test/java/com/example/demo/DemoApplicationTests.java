@@ -39,10 +39,4 @@ public class DemoApplicationTests {
         mvc.perform(get("/index"))
                 .andExpect(status().isOk());
     }
-
-    @Test
-    public void userTest() throws Exception {
-        mvc.perform(get("/{user_name}"))
-                .andExpect(status().isOk());
-    }
 }
