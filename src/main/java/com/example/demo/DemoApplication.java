@@ -18,7 +18,7 @@ public class DemoApplication {
         SpringApplication.run(DemoApplication.class, args);
     }
 
-    @GetMapping("/salt")
+    @GetMapping("/")
     @ResponseBody
     public Map<String, String> root() {
         Map<String, String > response = new HashMap<>();
